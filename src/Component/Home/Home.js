@@ -4,7 +4,7 @@ import { addToDatabaseCart, getDatabaseCart } from '../../databaseManager';
 import Cart from '../Cart/Cart';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import circle from '../../photos/8 Loading Page.png'
+import circle from '../../photos/loading.gif';
 
 const Home = () => {
 
@@ -82,7 +82,7 @@ const Home = () => {
          <div style={{ display: 'flex' }}>
 
              {
-                 products.length?  <div style={{ display: 'flex', flexWrap: 'wrap', width: '85%' }}>
+                 products.length > 0?  <div style={{ display: 'flex', flexWrap: 'wrap', width: '85%' }}>
                  {
                      products.map(pd => <SingleProductForHome handleAddCart={handleAddCart} pd={pd}></SingleProductForHome>)
                  }
