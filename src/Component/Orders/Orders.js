@@ -1,9 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { mainUser } from '../../App';
+import React, { useEffect, useState } from 'react';
 
 const Orders = () => {
 
-    const [loggedInUser] = useContext(mainUser);
     const [orderedProducts, setOrderedProducts] =  useState([]);
     const sessionUser = JSON.parse(sessionStorage.getItem('user'));
 

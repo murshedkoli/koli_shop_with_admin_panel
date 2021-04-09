@@ -5,7 +5,7 @@ import { mainUser } from '../../App';
 import './Header.css';
 
 const Header = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(mainUser);
+  const [ setLoggedInUser] = useContext(mainUser);
  const userInSession = JSON.parse(sessionStorage.getItem('user'));
 
 

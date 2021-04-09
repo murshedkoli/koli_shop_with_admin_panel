@@ -1,11 +1,9 @@
-import React, { useContext } from 'react';
+import React, { } from 'react';
 import { Redirect, Route } from 'react-router';
-import { mainUser } from '../../App';
 
 
 
 function PrivateRoute({ children, ...rest }) {
-    const [loggedInUser] = useContext(mainUser);
     
 
 const sessionUser = JSON.parse(sessionStorage.getItem('user'));
