@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -10,7 +9,6 @@ import { Container } from 'react-bootstrap';
 import Header from './Component/Header/Header';
 import { createContext } from 'react';
 import { useState } from 'react';
-import context from 'react-bootstrap/esm/AccordionContext';
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
 import Checkout from './Component/Checkout/Checkout';

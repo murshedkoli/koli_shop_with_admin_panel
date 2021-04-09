@@ -15,7 +15,7 @@ const AddProduct = () => {
         failed: ''
     })
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const [imageUrl, setImageUrl] = useState('');
 
     const onSubmit = (data, e) => {
