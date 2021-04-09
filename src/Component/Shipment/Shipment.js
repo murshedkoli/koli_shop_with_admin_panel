@@ -1,14 +1,12 @@
-import React, { useContext } from 'react';
+import React, {  } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
-import { mainUser } from '../../App';
 import { getDatabaseCart, processOrder } from '../../databaseManager';
 
 
 
 const Shipment = () => {
 
-    const [loggedInUser] = useContext(mainUser);
     
 const userInSession = JSON.parse(sessionStorage.getItem('user'))
 
