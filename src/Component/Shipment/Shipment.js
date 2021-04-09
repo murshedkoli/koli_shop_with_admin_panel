@@ -10,7 +10,7 @@ const Shipment = () => {
 
     const [loggedInUser] = useContext(mainUser);
     
-
+const userInSession = JSON.parse(sessionStorage.getItem('user'))
 
    const history = useHistory();
 
@@ -20,7 +20,7 @@ const Shipment = () => {
     const onSubmit = (data, e) => {
         const saveCart= getDatabaseCart();
         
-        const orders= {name: loggedInUser.displayName, email:loggedInUser.email, product:saveCart, Shipment:data, orderDate:new Date()}
+        const orders= {name: userInSession.displayName, email:userInSession.email, product:saveCart, Shipment:data, orderDate:new Date()}
         
         fetch('https://myshop-koli.herokuapp.com/placeorder', {
             method: 'POST',
@@ -44,11 +44,11 @@ const Shipment = () => {
     return (
         <div style={{textAlign:'center', width:'100%'}}>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input defaultValue={loggedInUser.displayName}  {...register("Name",  {  required: true })} placeholder="Write  Name" />
+                    <input defaultValue={userInSession.displayName}  {...register("Name",  {  required: true })} placeholder="Write  Name" />
                     <br />
                     <br />
 
-                    <input defaultValue={loggedInUser.email} {...register("Email", { required: true })} placeholder="Write Email" />
+                    <input defaultValue={userInSession.email} {...register("Email", { required: true })} placeholder="Write Email" />
                     <br />
                     <br />
                     <input {...register("Address", { required: true })} placeholder="Write Your Address" />
