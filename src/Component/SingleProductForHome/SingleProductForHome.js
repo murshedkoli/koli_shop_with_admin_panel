@@ -11,8 +11,8 @@ const SingleProductForHome = (props) => {
                 <Card.Img variant="top" src={imgUrl} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
-                    <span style={{marginRight:'70px'}}>Price : {price}</span>
-                    <Button variant="primary" onClick={()=> props.handleAddCart(props.pd)}>Buy Now</Button>
+                    <span style={{marginRight:'40px'}}>Price : {price}</span>
+                    <Button variant="success" onClick={()=> props.handleAddCart(props.pd)}>Add to Cart</Button>
                 </Card.Body>
             </Card>
         </div>

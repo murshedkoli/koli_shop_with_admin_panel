@@ -1,7 +1,6 @@
 import React from 'react';
 import './Cart.css'
 import { Table } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 
 const Cart = (props) => {

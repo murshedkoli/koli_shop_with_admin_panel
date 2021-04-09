@@ -39,18 +39,14 @@ const Login = () => {
   .signInWithPopup(provider)
   .then((result) => {
     var credential = result.credential;
+    console.log(credential);
 
-    var token = credential.accessToken;
     var user = result.user;
     setLoggedInUser(user);
     history.replace(from);
 
 })
 .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    var email = error.email;
-    var credential = error.credential;
   });
   }
 
@@ -69,8 +65,6 @@ const Login = () => {
 
   })
   .catch((error) => {
-    var errorMessage = error.message;
-    var email = error.email;
 
   });
 
