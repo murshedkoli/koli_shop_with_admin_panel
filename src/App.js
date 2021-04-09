@@ -17,6 +17,7 @@ import Orders from './Component/Orders/Orders';
 import AddProduct from './Component/AddProduct/AddProduct';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import Shipment from './Component/Shipment/Shipment';
+import NotFoundPageerr from './Component/NotFoundPage/NotFoundPageerr';
 
 export const mainUser = createContext();
 
@@ -55,6 +56,10 @@ const [loggedInUser, setLoggedInUser] = useState({});
           <PrivateRoute path="/shipment">
            <Shipment/>
           </PrivateRoute>
+
+          <Route path="/*">
+           <NotFoundPageerr/>
+          </Route>
 
         </Switch>
         </Router>
