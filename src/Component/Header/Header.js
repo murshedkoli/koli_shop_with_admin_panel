@@ -6,7 +6,15 @@ import './Header.css';
 
 const Header = () => {
   const [loggedInUser, setLoggedInUser] = useContext(mainUser);
-  console.log(loggedInUser)
+ const userInSession = JSON.parse(sessionStorage.getItem('user'));
+
+
+const handleLogOut =()=>{
+  setLoggedInUser({});
+  sessionStorage.clear();
+}
+
+
   return (
     <div>
 
@@ -31,21 +39,21 @@ const Header = () => {
             <Nav.Item>
               <Nav.Link>
                 {
-                  loggedInUser.email ?
-                    <span style={{ color: 'black' }}> WelCome, {loggedInUser.displayName}</span>
+                  userInSession ?
+                    <span style={{ color: 'black' }}> WelCome, {userInSession.displayName}</span>
                      :
                     <Button variant="success"><Link to="/login"> Login</Link></Button>
                 }
               </Nav.Link>
             </Nav.Item>
            {
-              loggedInUser.email && <img className="profilePhoto" src={loggedInUser.photoURL} alt=""/>
+              userInSession && <img className="profilePhoto" src={userInSession.photoURL} alt=""/>
            }
             <Nav.Item>
               <Nav.Link>
                 {
-                  loggedInUser.email &&
-                  <Button variant="danger" onClick={() => setLoggedInUser({})}> Logout</Button>
+                 userInSession &&
+                  <Button variant="danger" onClick={handleLogOut}> Logout</Button>
                 }
               </Nav.Link>
             </Nav.Item>

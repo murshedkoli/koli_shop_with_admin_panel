@@ -5,16 +5,17 @@ const Orders = () => {
 
     const [loggedInUser] = useContext(mainUser);
     const [orderedProducts, setOrderedProducts] =  useState([]);
-    console.log(orderedProducts)
+    const sessionUser = JSON.parse(sessionStorage.getItem('user'));
+
     useEffect(() => {
 
-        fetch('https://myshop-koli.herokuapp.com/orders?email='+loggedInUser.email)
+        fetch('https://myshop-koli.herokuapp.com/orders?email='+sessionUser.email)
             .then(res => res.json())
             .then(data => {
                 setOrderedProducts(data);
             })
 
-    }, [loggedInUser.email])
+    }, [sessionUser.email])
 
 
     return (

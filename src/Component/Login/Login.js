@@ -42,6 +42,8 @@ const Login = () => {
     console.log(credential);
 
     var user = result.user;
+    const userForSession = JSON.stringify(user);
+    sessionStorage.setItem('user', userForSession);
     setLoggedInUser(user);
     history.replace(from);
 
@@ -59,6 +61,8 @@ const Login = () => {
   .signInWithPopup(provider)
   .then((result) => {
     const user = result.user;
+    const userForSession = JSON.stringify(user);
+    sessionStorage.setItem('user', userForSession);
     setLoggedInUser(user)
     history.replace(from);
 
