@@ -16,7 +16,7 @@ const Home = () => {
         const saveCart = getDatabaseCart();
         const saveKeys = Object.keys(saveCart);
         
-        fetch('http://localhost:4000/cartproduct', {
+        fetch('https://myshop-koli.herokuapp.com/cartproduct', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ const Home = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:4000/products')
+        fetch('https://myshop-koli.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);

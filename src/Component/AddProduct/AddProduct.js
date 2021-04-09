@@ -29,7 +29,7 @@ const AddProduct = () => {
             uid:nameForId+data.ProductPrice,
             imgUrl: imageUrl
         }
-        fetch('http://localhost:4000/addproduct', {
+        fetch('https://myshop-koli.herokuapp.com/addproduct', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

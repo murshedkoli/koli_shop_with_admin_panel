@@ -22,7 +22,7 @@ const Shipment = () => {
         
         const orders= {name: loggedInUser.displayName, email:loggedInUser.email, product:saveCart, Shipment:data, orderDate:new Date()}
         
-        fetch('http://localhost:4000/placeorder', {
+        fetch('https://myshop-koli.herokuapp.com/placeorder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

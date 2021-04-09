@@ -8,7 +8,7 @@ const ManageProducts = () => {
    
     useEffect(()=>{
 
-        fetch('http://localhost:4000/products')
+        fetch('https://myshop-koli.herokuapp.com/products')
         .then(res => res.json())
         .then(data=>{
             setProducts(data);
@@ -18,7 +18,7 @@ const ManageProducts = () => {
 
 
     const handeDelete = id=>{
-        fetch(`http://localhost:4000/delete/${id}`,{
+        fetch(`https://myshop-koli.herokuapp.com/delete/${id}`,{
             method:'DELETE'
         })
         .then(res=> res.json())

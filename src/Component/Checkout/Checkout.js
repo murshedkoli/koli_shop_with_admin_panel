@@ -10,7 +10,7 @@ const Checkout = () => {
         const saveCart = getDatabaseCart();
         const saveKeys = Object.keys(saveCart);
 
-        fetch('http://localhost:4000/cartproduct', {
+        fetch('https://myshop-koli.herokuapp.com/cartproduct', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
