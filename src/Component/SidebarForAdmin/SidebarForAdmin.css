@@ -1,0 +1,36 @@
+.sidebar{
+    background-color: teal;
+    height: 100vh;
+    padding-top: 20px;
+}
+ul{
+   padding: 0;
+}
+ul li{
+    list-style-type: none;
+    padding: 10px 30px;
+  
+}
+
+ul li:hover{
+    
+    background-color: rgb(3, 65, 65);
+
+  
+}
+
+.sidebar h1{
+    color: white;
+    text-align: center;
+}
+
+
+.adminlink{
+    color: white;
+    font-size: 20px;  
+}
+
+.adminlink:hover{
+    color: white;
+    text-decoration: none; 
+}

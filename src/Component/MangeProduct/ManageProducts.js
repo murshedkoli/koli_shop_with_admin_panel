@@ -28,7 +28,7 @@ const ManageProducts = () => {
     }
 
     return (
-        <div >
+        <div style={{padding:'30px'}}>
               <Table striped bordered hover size="sm">
                 <thead>
                     <tr>

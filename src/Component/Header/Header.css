@@ -1,0 +1,10 @@
+.navOriginal{
+    line-height: 40px;
+
+}
+
+.profilePhoto{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}

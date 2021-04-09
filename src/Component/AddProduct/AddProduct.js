@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SidebarForAdmin from '../SidebarForAdmin/SidebarForAdmin';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-
+import './AddProduct.css';
 
 
 const AddProduct = () => {
@@ -76,8 +76,8 @@ const AddProduct = () => {
             <div style={{ width: '30%' }}>
                 <SidebarForAdmin />
             </div>
-            <div style={{ width: '70%' }}>
-                <form onSubmit={handleSubmit(onSubmit)}>
+            <div style={{ width: '70%', padding:'50px' }}>
+                <form  onSubmit={handleSubmit(onSubmit)}>
                     <input type="text"  {...register("ProductName", { required: true })} placeholder="Write Product Name" />
                     <br />
 
